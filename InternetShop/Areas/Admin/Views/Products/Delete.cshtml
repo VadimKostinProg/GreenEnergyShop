@@ -1,0 +1,48 @@
+﻿@model ProductResponse
+
+@{
+    ViewBag.Title = "Видалення продукту";
+}
+
+<form asp-controller="Products" asp-action="Delete" method="post" enctype="multipart/form-data">
+    <div class="container border p-3 mt-4">
+        <h2 class="text-primary mt-3">
+            Видалення продукту
+        </h2>
+        <input asp-for="Id" hidden />
+        <input asp-for="ImageUrl" hidden />
+        <div class="row mb-3">
+            <div class="col-3">
+                <label asp-for="ImageUrl" class="pt-3">Зображення</label>
+            </div>
+            <div class="col-9">
+                <img src="@Model.ImageUrl" style="height: 300px" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-3">
+                <label asp-for="Name" class="pt-3">Назва</label>
+            </div>
+            <div class="col-9">
+                <input type="text" asp-for="Name" class="form-control" disabled />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-3">
+                <label asp-for="CategoryId" class="pt-3">Категорія</label>
+            </div>
+            <div class="col-9">
+                <input asp-for="CategoryId" hidden />
+                <input value="@Model.Category?.Name" disabled class="form-control"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-danger form-control">Видалити</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Products" asp-action="Index" class="btn btn-secondary form-control">Назад</a>
+            </div>
+        </div>
+    </div>
+</form>

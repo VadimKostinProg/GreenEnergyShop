@@ -1,0 +1,49 @@
+﻿@model IEnumerable<OrderDetailsResponse>
+
+@{
+    ViewBag.Title = "Деталі замовлення";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-6">
+                    <h2 class="text-primary">Деталі замовлення</h2>
+                </div>
+            </div>
+        </div>
+
+        <table id="productsTable" class="table table-bordered table-striped w-100">
+            <thead>
+                <tr>
+                    <th>Назва продукту</th>
+                    <th>Категорія</th>
+                    <th>Ціна</th>
+                    <th>Кількість</th>
+                    <th>Вартість</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    decimal totalCost = 0;
+                }
+                @foreach (OrderDetailsResponse orderDetails in Model)
+                {
+                    <tr>
+                        <td>@orderDetails.ProductName</td>
+                        <td>@orderDetails.CategoryName</td>
+                        <td>@orderDetails.Price</td>
+                        <td>@orderDetails.Quantity</td>
+                        <td>@orderDetails.Cost</td>
+                    </tr>
+                    totalCost += orderDetails.Cost;
+                }
+                <tr>
+                    <td colspan="4">Загальна вартість:</td>
+                    <td>@totalCost</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

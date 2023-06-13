@@ -1,0 +1,35 @@
+﻿@model CategoryUpdateRequest
+
+@{
+    ViewBag.Title = "Редагування категорії";
+}
+
+<form asp-controller="Categories" asp-action="Edit" method="post">
+    <div class="container border p-3 mt-4 w-75">
+        <h1 class="m-3">Редагування категорії</h1>
+        <input asp-for="Id" hidden />
+        <div class="row mb-5">
+            <div class="col-3">
+                <label asp-for="Name" class="pt-3 form-label">Назва категорії</label>
+            </div>
+            <div class="col-9">
+                <input type="text" asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-primary form-control" type="submit">Редагувати</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Categories" asp-action="Index" class="btn btn-secondary form-control">Назад</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial.cshtml" />
+    }
+}

@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Оформлення замовлення";
+}
+
+@model OrderAddRequest
+
+<form asp-controller="Home" asp-action="PostOrder" method="post" enctype="multipart/form-data">
+    <div class="container border p-3 mt-4" id="content">
+        <div class="row mb-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label asp-for="CustomerPhoneNumber">Введіть ваш номер:</label>
+                        <input asp-for="CustomerPhoneNumber" type="text" id="CustomerPhoneNumber" name="CustomerPhoneNumber" class="form-control" />
+                        <span asp-validation-for="CustomerPhoneNumber" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label asp-for="TimeToCall">Оберіть зручний час для дзвінку:</label>
+                        <select asp-for="TimeToCall" asp-items="ViewBag.TimeToCallList" class="form-control"></select>
+                        <span asp-validation-for="TimeToCall" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <label asp-for="ProductsId">Ваше замовлення</label>
+                <div id="orderBox">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-6 text-center text-md-end">
+                <button type="submit" id="submit-button" class="btn btn-danger form-control">Підтвердити</button>
+            </div>
+            <div class="text-center text-md-start d-none d-md-block col-md-6">
+                <a asp-controller="Home" asp-action="ShoppingCart" class="btn btn-secondary form-control">Назад</a>
+            </div>
+        </div>
+        @if (ViewData.ContainsKey("Errors"))
+        {
+            <div class="row">
+                <div class="col-6">
+                    @foreach (var error in ViewBag.Errors)
+                    {
+                        <span class="text-danger">@error</span>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</form>
+
+@section Scripts{
+    <script src="~/js/orderPage.js"></script>
+    <script src="~/js/orderConfirmed.js"></script>
+    @{
+        <partial name="_ValidationScriptsPartial.cshtml" />
+    }
+}

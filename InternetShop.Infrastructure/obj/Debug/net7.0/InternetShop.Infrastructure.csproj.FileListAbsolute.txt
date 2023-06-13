@@ -1,0 +1,17 @@
+D:\Projects\InternetShop\InternetShop.Infrastructure\bin\Debug\net7.0\InternetShop.Infrastructure.deps.json
+D:\Projects\InternetShop\InternetShop.Infrastructure\bin\Debug\net7.0\InternetShop.Infrastructure.runtimeconfig.json
+D:\Projects\InternetShop\InternetShop.Infrastructure\bin\Debug\net7.0\InternetShop.Infrastructure.dll
+D:\Projects\InternetShop\InternetShop.Infrastructure\bin\Debug\net7.0\InternetShop.Infrastructure.pdb
+D:\Projects\InternetShop\InternetShop.Infrastructure\bin\Debug\net7.0\InternetShop.Core.dll
+D:\Projects\InternetShop\InternetShop.Infrastructure\bin\Debug\net7.0\InternetShop.Core.pdb
+D:\Projects\InternetShop\InternetShop.Infrastructure\obj\Debug\net7.0\InternetShop.Infrastructure.csproj.AssemblyReference.cache
+D:\Projects\InternetShop\InternetShop.Infrastructure\obj\Debug\net7.0\InternetShop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\InternetShop\InternetShop.Infrastructure\obj\Debug\net7.0\InternetShop.Infrastructure.AssemblyInfoInputs.cache
+D:\Projects\InternetShop\InternetShop.Infrastructure\obj\Debug\net7.0\InternetShop.Infrastructure.AssemblyInfo.cs
+D:\Projects\InternetShop\InternetShop.Infrastructure\obj\Debug\net7.0\InternetShop.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projects\InternetShop\InternetShop.Infrastructure\obj\Debug\net7.0\InternetShop.Infrastructure.csproj.CopyComplete
+D:\Projects\InternetShop\InternetShop.Infrastructure\obj\Debug\net7.0\InternetShop.Infrastructure.dll
+D:\Projects\InternetShop\InternetShop.Infrastructure\obj\Debug\net7.0\refint\InternetShop.Infrastructure.dll
+D:\Projects\InternetShop\InternetShop.Infrastructure\obj\Debug\net7.0\InternetShop.Infrastructure.pdb
+D:\Projects\InternetShop\InternetShop.Infrastructure\obj\Debug\net7.0\InternetShop.Infrastructure.genruntimeconfig.cache
+D:\Projects\InternetShop\InternetShop.Infrastructure\obj\Debug\net7.0\ref\InternetShop.Infrastructure.dll

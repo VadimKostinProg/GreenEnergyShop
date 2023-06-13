@@ -1,0 +1,12 @@
+D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.csproj.AssemblyReference.cache
+D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.AssemblyInfoInputs.cache
+D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.AssemblyInfo.cs
+D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.csproj.CoreCompileInputs.cache
+D:\Projects\InternetShop\InternetShop.Core\bin\Debug\net7.0\InternetShop.Core.deps.json
+D:\Projects\InternetShop\InternetShop.Core\bin\Debug\net7.0\InternetShop.Core.dll
+D:\Projects\InternetShop\InternetShop.Core\bin\Debug\net7.0\InternetShop.Core.pdb
+D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.dll
+D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\refint\InternetShop.Core.dll
+D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.pdb
+D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\ref\InternetShop.Core.dll

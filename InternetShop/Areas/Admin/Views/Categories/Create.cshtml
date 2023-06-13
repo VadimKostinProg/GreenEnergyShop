@@ -1,0 +1,52 @@
+﻿@model CategoryAddRequest
+
+@{
+    ViewBag.Title = "Створення категорії";
+}
+
+<form asp-controller="Categories" asp-action="Create" method="post">
+    <div class="container border p-3 mt-4 w-75">
+        <h1 class="m-3">Створення категорії</h1>
+        <div class="row mb-3">
+            <div class="col-5">
+                <label asp-for="Name" class="pt-3 form-label">Назва категорії</label>
+            </div>
+            <div class="col-7">
+                <input type="text" asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <label asp-for="CharacteristicsList" class="pt-3 form-label">Характеристики</label>
+            </div>
+            <div class="col-7" id="characteristics-list">
+                <div class="mb-3">
+                    <input type="text" name="CharacteristicsList[0]" class="form-control" />
+                    <span asp-validation-for="CharacteristicsList" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-6"></div>
+            <div class="col-6 text-end">
+                <button type="button" onclick="OnAddClick()" class="btn btn-primary fs-3">+</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-primary form-control" type="submit">Створити</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Categories" asp-action="Index" class="btn btn-secondary form-control">Назад</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    <script src="~/js/category.js"></script>
+    @{
+        <partial name="_ValidationScriptsPartial.cshtml" />
+    }
+}

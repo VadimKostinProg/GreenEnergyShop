@@ -1,0 +1,86 @@
+﻿@model IEnumerable<ProductResponse>
+
+@{
+    ViewBag.Title = "Продукти";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-6">
+                    <h2 class="text-primary">Продукти</h2>
+                </div>
+                <div class="col-6 text-end">
+                    <a asp-controller="Products" asp-action="Create" class="btn btn-primary mb-3">
+                        <i class="bi bi-plus-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <table id="productsTable" class="table table-bordered table-striped w-100">
+            <thead>
+                <tr>
+                    <th>Зображення</th>
+                    <th>Назва</th>
+                    <th>Категорія</th>
+                    <th>Ціна</th>
+                    <th>Активна знижка</th>
+                    <th>Ціна зі знижкою</th>
+                    <th>Популярне</th>
+                    <th>Статус</th>
+                    <th style="width:15%">Опції</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ProductResponse product in Model)
+                {
+                    <tr>
+                        <td><img src="@product.ImageUrl" class="img-fluid" /></td>
+                        <td>@product.Name</td>
+                        <td>@product.Category?.Name</td>
+                        <td>@product.Price</td>
+                        <td>
+                            @if (product.IsDiscountActive)
+                            {
+                                <i class="bi bi-check-square"></i>
+                            }
+                            else
+                            {
+                                <i class="bi bi-x-square"></i>
+                            }
+                        </td>
+                        <td>@product.DiscountPrice</td>
+                        <td>
+                            @if (product.IsPopular)
+                            {
+                                <i class="bi bi-check-square"></i>
+                            }
+                            else
+                            {
+                                <i class="bi bi-x-square"></i>
+                            }
+                        </td>
+                        @switch (product.Status)
+                        {
+                            case ProductStatus.InStock:
+                                <td style="color: green">Є в наявності</td>
+                                break;
+                            case ProductStatus.Ends:
+                                <td style="color: orangered">Закінчується</td>
+                                break;
+                            case ProductStatus.NotAvialable:
+                                <td style="color: red">Немає в наявності</td>
+                                break;
+                        }
+                        <td>
+                            <a class="btn btn-primary mb-3" asp-controller="Products" asp-action="Edit" asp-route-productId="@product.Id"><i class="bi bi-pencil-square"></i></a>
+                            <a class="btn btn-danger mb-3" asp-controller="Products" asp-action="Delete" asp-route-productId="@product.Id"><i class="bi bi-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

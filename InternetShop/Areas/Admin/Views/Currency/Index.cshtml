@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Налаштування курсу валют";
+}
+
+<form asp-controller="Currency" asp-action="ChangePrice" method="post">
+    <div class="container border p-3 mt-4 w-75">
+        <h1 class="m-3">Налаштування курсу валют</h1>
+        <div class="row mb-3">
+            <div class="col-5">
+                <label class="pt-3 form-label">Ціна USD в гривнях:</label>
+            </div>
+            <div class="col-7">
+                <input type="text" name="USDPrice" class="form-control" value="@ViewBag.USDPrice" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <label  class="pt-3 form-label">Ціна EUR в гривнях:</label>
+            </div>
+            <div class="col-7" id="characteristics-list">
+                <div class="mb-3">
+                    <input type="text" name="EURPrice" class="form-control" value="@ViewBag.EURPrice" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+            </div>
+            <div class="col-6 text-end">
+                <button type="submit" class="btn btn-primary">Зберегти</button>
+            </div>
+        </div>
+    </div>
+</form>

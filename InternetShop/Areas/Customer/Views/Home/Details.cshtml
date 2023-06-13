@@ -1,0 +1,82 @@
+﻿@model ProductViewModel
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-sm-12 col-md-4 mb-5">
+            <img src="@Model.ImageUrl" style="width: 95%" class="border shadow" />
+        </div>
+        <div class="col-sm-12 col-md-8">
+            <h2>@Model.Name</h2>
+            <p class="text-secondary">
+                Котегорія:
+                <a asp-controller="Home" asp-action="Category" asp-route-categoryId="@Model.CategoryId">
+                    @Model.CategoryName
+                </a>
+            </p>
+            <p>@Model.Description</p>
+            @switch (Model.Status)
+            {
+                case InternetShop.Core.Enums.ProductStatus.InStock:
+                case InternetShop.Core.Enums.ProductStatus.Ends:
+                    if (Model.Status == InternetShop.Core.Enums.ProductStatus.Ends)
+                    {
+                        <h3 class="text-danger">Закінчується</h3>
+                    }
+                    @if (!Model.IsDiscountActive)
+                    {
+                        <p class="text-primary">@Model.Price <span class="currency">₴</span></p>
+                    }
+                    else
+                    {
+                        <p class="text-decoration-line-through">@Model.Price <span class="currency">₴</span></p>
+                        <p class="text-danger">@Model.DiscountPrice <span class="currency">₴</span></p>
+                    }
+                    <div class="row">
+                        <div class="col-6">
+                            <input asp-for="Quantity" type="number" id="quantity-input" oninput="quantityChanged()" class="form-control" value="1" />
+                        </div>
+                        <div class="col-6">
+                            <button type="submit" id="addToCart-button" class="btn btn-danger">Додати в кошик</button>
+                        </div>
+                    </div>
+                    break;
+                case InternetShop.Core.Enums.ProductStatus.NotAvialable:
+                    <h2 class="text-danger">Немає в наявності</h2>
+                    break;
+            }
+            <input id="productId-input" value="@Model.Id" hidden />
+            <input id="productName-input" value="@Model.Name" hidden />
+            <input id="productImage-input" value="@Model.ImageUrl" hidden />
+            @if(Model.IsDiscountActive)
+            {
+                <input id="productPrice-input" value="@Model.DiscountPrice" hidden />
+            }
+            else
+            {
+                <input id="productPrice-input" value="@Model.Price" hidden />
+            }
+        </div>
+    </div>
+    <div class="row mt-5">
+        <h2>Характеристики</h2>
+        <table class="table table-bordered table-striped">
+            <tbody>
+                @foreach (var characteristic in Model.Characteristics)
+                {
+                    <tr>
+                        <td>@characteristic.Key</td>
+                        <td>@characteristic.Value</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/details.js"></script>
+}

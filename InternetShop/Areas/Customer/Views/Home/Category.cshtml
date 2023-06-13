@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ProductResponse>
+
+@{
+    ViewBag.Title = ViewBag.CategoryName;
+}
+
+<div class="container-fluid">
+    <div class="dropdown d-md-none mb-3">
+        <button class="btn btn-secondary w-100 dropdown-toggle" type="button" data-toggle="dropdown">
+            Категорії
+        </button>
+        <div class="dropdown-menu mx-auto">
+            @foreach (CategoryResponse category in ViewBag.Categories)
+            {
+                <hr />
+                <a class="dropdown-item btn btn-secondary w-100 text-start" asp-area="Customer" asp-controller="Home" asp-action="Category" asp-route-categoryId="@category.Id">
+                    @category.Name
+                </a>
+            }
+            <hr />
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-12 col-md-3 col-lg-2 border-end d-none d-md-block">
+            <h3>Категорії</h3>
+            @foreach (CategoryResponse category in ViewBag.Categories)
+            {
+                <hr />
+                <a class="btn btn-secondary w-100 text-start" asp-area="Customer" asp-controller="Home" asp-action="Category" asp-route-categoryId="@category.Id">
+                    @category.Name
+                </a>
+            }
+        </div>
+        <div class="col-12 col-md-9 col-lg-10">
+            <h1>@ViewBag.CategoryName</h1>
+
+            <div class="card-list justify-content-center mt-3">
+                @foreach (ProductResponse product in Model)
+                {
+                    <div class="card shadow p-3 border-5 rounded mb-3" style="width: 18rem; margin-right: 4em">
+                        <img src="@product.ImageUrl" class="card-img-top">
+                        <div class="card-body bottom-0">
+                            <h5 class="card-title">@product.Name</h5>
+                            <div class="card-text">
+                                @if (!product.IsDiscountActive)
+                                {
+                                    <p class="card-text">@product.Price <span class="currency">₴</span></p>
+                                }
+                                else
+                                {
+                                    <p class="text-decoration-line-through">@product.Price <span class="currency">₴</span></p>
+                                    <p class="card-text text-danger">@product.DiscountPrice <span class="currency">₴</span></p>
+                                }
+                            </div>
+                            <a asp-controller="Home" asp-action="Details" asp-route-productId="@product.Id" class="btn btn-primary w-100">Замовити</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

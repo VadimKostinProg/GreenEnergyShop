@@ -1,0 +1,48 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewBag.Title = "Налаштування шапки сайту";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-6">
+                    <h2 class="text-primary">Шапка сайту</h2>
+                </div>
+                <div class="col-6 text-end">
+                    <a asp-controller="PageHeader" asp-action="AddImage" class="btn btn-primary mb-3">
+                        <i class="bi bi-plus-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Зображення</th>
+                    <th style="width:15%">Опції</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (string url in Model)
+                {
+                    <tr>
+                        <td><img src="@url" /></td>
+                        <td style="width:15%">
+                            <a asp-action="Delete" asp-route-url="@url" class="btn btn-danger" >
+                                <i class="bi bi-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/pageHeader.js"></script>
+}

@@ -1,0 +1,24 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "Видалення зображення";
+}
+
+<form asp-action="PostDelete" method="post">
+    <div class="container border p-3 mt-4 w-75">
+        <h1 class="m-3">Видалення зображення шапки профілю</h1>
+        <div class="row mb-5">
+            <input name="url" value="@Model" hidden />
+
+            <img src="@Model" />
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-danger form-control" type="submit">Видалити</button>
+            </div>
+            <div class="col-6">
+                <a asp-action="Index" class="btn btn-secondary form-control">Назад</a>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container-fluid">
+    <div class="dropdown d-md-none mb-3">
+        <button class="btn btn-secondary w-100 dropdown-toggle" type="button" data-toggle="dropdown">
+            Категорії
+        </button>
+        <div class="dropdown-menu mx-auto">
+            @foreach (CategoryResponse category in ViewBag.Categories)
+            {
+                <hr />
+                <a class="dropdown-item btn btn-secondary w-100 text-start" asp-area="Customer" asp-controller="Home" asp-action="Category" asp-route-categoryId="@category.Id">
+                    @category.Name
+                </a>
+            }
+            <hr />
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-12 col-md-3 col-lg-2 border-end d-none d-md-block">
+            <h2>Категорії</h2>
+            @foreach (CategoryResponse category in ViewBag.Categories)
+            {
+                <hr />
+                <a class="btn btn-secondary w-100 text-start" asp-area="Customer" asp-controller="Home" asp-action="Category" asp-route-categoryId="@category.Id">
+                    @category.Name
+                </a>
+            }
+            <hr />
+        </div>
+        <div class="col-12 col-md-9 col-lg-10">
+            <form class="mb-5" asp-action="Search" method="get">
+                <div class="container">
+                    <div class="row">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-search"></i></span>
+                            <input type="text" name="query" class="form-control" placeholder="Пошук..." />
+                            <button type="submit" class="btn btn-primary">Пошук</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            @if (ViewBag.IsHeaderPresent)
+            {
+                <div id="carouselExampleRide" class="carousel slide mb-3 page-header" data-bs-ride="true">
+                    <div class="carousel-inner">
+                        @for (int i = 0; i < ViewBag.ImagesUrl.Count; i++)
+                        {
+                            if (i == 0)
+                            {
+                                <div class="carousel-item active">
+                                    <img src="@ViewBag.ImagesUrl[i]" class="d-block w-100">
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="carousel-item">
+                                    <img src="@ViewBag.ImagesUrl[i]" class="d-block w-100">
+                                </div>
+                            }
+                        }
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            }
+
+            @if (ViewBag.ShowPopular)
+            {
+                <section>
+                    <h2>Популярне</h2>
+
+                    <div class="card-list justify-content-center">
+                        @foreach (ProductResponse product in ViewBag.PopularProducts)
+                        {
+                            <div class="card shadow p-3 border-5 rounded mb-5" style="width: 18rem; margin-right: 4em">
+                                <img src="@product.ImageUrl" class="card-img-top">
+                                <div class="card-body bottom-0">
+                                    <h5 class="card-title">@product.Name</h5>
+                                    <div class="card-text">
+                                        @if (!product.IsDiscountActive)
+                                        {
+                                            <p>@product.Price <span class="currency">₴</span></p>
+                                        }
+                                        else
+                                        {
+                                            <p class="text-decoration-line-through">@product.Price <span class="currency">₴</span></p>
+                                            <p class="text-danger">@product.DiscountPrice <span class="currency">₴</span></p>
+                                        }
+                                    </div>
+                                    <a asp-controller="Home" asp-action="Details" asp-route-productId="@product.Id" class="btn btn-primary w-100">Замовити</a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+            }
+
+            @if (ViewBag.ShowAction)
+            {
+                <section>
+                    <h2>Акція</h2>
+
+                    <div class="card-list">
+                        @foreach (ProductResponse product in ViewBag.ActionProducts)
+                        {
+                            <div class="card shadow p-3 border-5 rounded mb-3" style="width: 18rem; margin-right: 4em">
+                                <img src="@product.ImageUrl" class="card-img-top">
+                                <div class="card-body bottom-0">
+                                    <h5 class="card-title">@product.Name</h5>
+                                    <div class="card-text">
+                                        @if (!product.IsDiscountActive)
+                                        {
+                                            <p>@product.Price <span class="currency">₴</span></p>
+                                        }
+                                        else
+                                        {
+                                            <p class="text-decoration-line-through">@product.Price <span class="currency">₴</span></p>
+                                            <p class="text-danger">@product.DiscountPrice <span class="currency">₴</span></p>
+                                        }
+                                    </div>
+                                    <a asp-controller="Home" asp-action="Details" asp-route-productId="@product.Id" class="btn btn-primary w-100">Замовити</a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+            }
+        </div>
+    </div>
+</div>
