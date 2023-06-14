@@ -9,201 +9,201 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = InternetShop.UI
 build_property.RootNamespace = InternetShop.UI
-build_property.ProjectDir = D:\Projects\InternetShop\InternetShop\
+build_property.ProjectDir = D:\InternetShop\GreenEnergyShop\InternetShop\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Projects\InternetShop\InternetShop
+build_property.MSBuildProjectDirectory = D:\InternetShop\GreenEnergyShop\InternetShop
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Categories/Create.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Categories/Delete.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Categories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Categories/Edit.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Categories/Index.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Currency/Index.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Currency/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VycmVuY3lcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Orders/Delete.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Orders/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Orders/Details.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Orders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Orders/Index.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/PageHeader/AddImage.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/PageHeader/AddImage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFnZUhlYWRlclxBZGRJbWFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/PageHeader/Delete.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/PageHeader/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFnZUhlYWRlclxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/PageHeader/Index.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/PageHeader/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFnZUhlYWRlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Products/Create.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Products/Delete.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Products/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Products/Edit.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Products/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Products/Index.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Users/CreateUser.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Users/CreateUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcQ3JlYXRlVXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/Users/Index.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/_ViewImports.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Admin/Views/_ViewStart.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Customer/Views/Home/Category.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/Home/Category.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxDYXRlZ29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Customer/Views/Home/ConfirmedOrder.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/Home/ConfirmedOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxDb25maXJtZWRPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Customer/Views/Home/Details.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/Home/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Customer/Views/Home/Index.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Customer/Views/Home/OrderPage.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/Home/OrderPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxPcmRlclBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Customer/Views/Home/Search.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/Home/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Customer/Views/Home/ShoppingCart.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/Home/ShoppingCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZVxTaG9wcGluZ0NhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Customer/Views/_ViewImports.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Customer/Views/_ViewStart.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/Account/Login.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/Account/Logout.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Views/Home/Index.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Views/Home/Privacy.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Views/Shared/Error.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Views/Shared/_LoginPartial.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Views/_ViewImports.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Views/_ViewStart.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/InternetShop/InternetShop/Views/Shared/_Layout.cshtml]
+[D:/InternetShop/GreenEnergyShop/InternetShop/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-d4j0ldj1xg

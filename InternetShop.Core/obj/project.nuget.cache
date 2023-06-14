@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hyEzZl3uN9Yry8ujwTqps3XO5yQRKU/31AarUieXFgJSPOHG0oPyKSU8kqR3ijFW/fo0rvm8iHVNGTHi12KrWg==",
+  "dgSpecHash": "nHy/syBZcxPWh25IrUgTyDmd6Rd6i4h6CL1bBYvALXS9xE4VAYbT7A8lNCm2/Vi5j9EkVbZS7hKlmygnSXnsyQ==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\InternetShop\\InternetShop.Core\\InternetShop.Core.csproj",
+  "projectFilePath": "D:\\InternetShop\\GreenEnergyShop\\InternetShop.Core\\InternetShop.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kosti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.5\\microsoft.aspnetcore.cryptography.internal.7.0.5.nupkg.sha512",
     "C:\\Users\\kosti\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.5\\microsoft.aspnetcore.cryptography.keyderivation.7.0.5.nupkg.sha512",

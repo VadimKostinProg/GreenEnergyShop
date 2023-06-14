@@ -3929,11 +3929,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\InternetShop\\InternetShop.Infrastructure\\InternetShop.Infrastructure.csproj",
+      "projectUniqueName": "D:\\InternetShop\\GreenEnergyShop\\InternetShop.Infrastructure\\InternetShop.Infrastructure.csproj",
       "projectName": "InternetShop.Infrastructure",
-      "projectPath": "D:\\Projects\\InternetShop\\InternetShop.Infrastructure\\InternetShop.Infrastructure.csproj",
+      "projectPath": "D:\\InternetShop\\GreenEnergyShop\\InternetShop.Infrastructure\\InternetShop.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\kosti\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\InternetShop\\InternetShop.Infrastructure\\obj\\",
+      "outputPath": "D:\\InternetShop\\GreenEnergyShop\\InternetShop.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3955,8 +3955,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Projects\\InternetShop\\InternetShop.Core\\InternetShop.Core.csproj": {
-              "projectPath": "D:\\Projects\\InternetShop\\InternetShop.Core\\InternetShop.Core.csproj"
+            "D:\\InternetShop\\GreenEnergyShop\\InternetShop.Core\\InternetShop.Core.csproj": {
+              "projectPath": "D:\\InternetShop\\GreenEnergyShop\\InternetShop.Core\\InternetShop.Core.csproj"
             }
           }
         }

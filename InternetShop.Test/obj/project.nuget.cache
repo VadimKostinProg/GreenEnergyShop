@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n5cZgnoX8KJodd06f0WDZPGsfcC29UeI05ZN43DX8PZ5Z2BJA8YnJz8IQBjccu4Nts865JXJLTTitOgmWyBE5w==",
+  "dgSpecHash": "/Rtd7Ypstvqv5wjfbP0Act94NVx+PbLcpA4/bBLMRTZ0aGyqEX+nLlAjeWdW806MAFKhe5tVff8/XWRci1ubDg==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\InternetShop\\InternetShop.Test\\InternetShop.Test.csproj",
+  "projectFilePath": "D:\\InternetShop\\GreenEnergyShop\\InternetShop.Test\\InternetShop.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kosti\\.nuget\\packages\\autofixture\\4.18.0\\autofixture.4.18.0.nupkg.sha512",
     "C:\\Users\\kosti\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

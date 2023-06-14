@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5URV37u7NQRz98eAphxhfTPGTscpZXbdWlfhuwZph+Bt9NoG+9GbhFsPb7nEDH4phxFmXQFc4Jw5jTK1Pn8dEg==",
+  "dgSpecHash": "GSEW1qPlJgZzMfhP2IUke+WPUjcDYt/06VRg53fN2pSQ24QsRbOec+usvjJo4clFVrC9zt5u9sHVCuaVu3Nvvg==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\InternetShop\\InternetShop\\InternetShop.UI.csproj",
+  "projectFilePath": "D:\\InternetShop\\GreenEnergyShop\\InternetShop\\InternetShop.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kosti\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\kosti\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
