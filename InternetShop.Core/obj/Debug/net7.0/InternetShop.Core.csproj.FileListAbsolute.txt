@@ -10,3 +10,15 @@ D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.dl
 D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\refint\InternetShop.Core.dll
 D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.pdb
 D:\Projects\InternetShop\InternetShop.Core\obj\Debug\net7.0\ref\InternetShop.Core.dll
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\bin\Debug\net7.0\InternetShop.Core.deps.json
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\bin\Debug\net7.0\InternetShop.Core.dll
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\bin\Debug\net7.0\InternetShop.Core.pdb
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.csproj.AssemblyReference.cache
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.AssemblyInfoInputs.cache
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.AssemblyInfo.cs
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.csproj.CoreCompileInputs.cache
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.dll
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\obj\Debug\net7.0\refint\InternetShop.Core.dll
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\obj\Debug\net7.0\InternetShop.Core.pdb
+D:\InternetShop\GreenEnergyShop\InternetShop.Core\obj\Debug\net7.0\ref\InternetShop.Core.dll
