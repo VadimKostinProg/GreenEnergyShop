@@ -60,7 +60,7 @@ namespace InternetShop.Core.Services
 
             string path = Path.Combine(rootPath, @$"images\{folder}");
 
-            if (Directory.Exists(@$"images\{folder}"))
+            if (!Directory.Exists(path))
                 return new List<string>();
 
             return Directory.GetFiles(path).Select(file => $@"\images\{folder}\{Path.GetFileName(file)}");

@@ -42,7 +42,6 @@
     <Folder Include="Areas\Customer\Data\" />
     <Folder Include="Areas\Customer\Views\Shared\" />
     <Folder Include="wwwroot\images\products\" />
-    <Folder Include="wwwroot\images\header\" />
   </ItemGroup>
 
   <ItemGroup>

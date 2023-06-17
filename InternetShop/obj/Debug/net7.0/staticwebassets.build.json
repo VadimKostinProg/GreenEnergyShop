@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v/AU2iEEF5KY0Io5o+QhPY199n4crOpNbylhVplppeI=",
+  "Hash": "432s6o8UHVjysxL18Yv38MPGCdkXUb6OIead28D/BHQ=",
   "Source": "InternetShop.UI",
   "BasePath": "_content/InternetShop.UI",
   "Mode": "Default",
@@ -1122,12 +1122,12 @@
       "OriginalItemSpec": "wwwroot\\images\\carusels\\placeholder.png"
     },
     {
-      "Identity": "D:\\InternetShop\\GreenEnergyShop\\InternetShop\\wwwroot\\images\\header\\067d827a-a240-4eb7-81fd-c1f373262a46.PNG",
+      "Identity": "D:\\InternetShop\\GreenEnergyShop\\InternetShop\\wwwroot\\images\\header\\18cdb505-ffa5-4681-8f04-792e4f49fb3f.PNG",
       "SourceId": "InternetShop.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\InternetShop\\GreenEnergyShop\\InternetShop\\wwwroot\\",
       "BasePath": "_content/InternetShop.UI",
-      "RelativePath": "images/header/067d827a-a240-4eb7-81fd-c1f373262a46.PNG",
+      "RelativePath": "images/header/18cdb505-ffa5-4681-8f04-792e4f49fb3f.PNG",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1136,15 +1136,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\header\\067d827a-a240-4eb7-81fd-c1f373262a46.PNG"
+      "OriginalItemSpec": "wwwroot\\images\\header\\18cdb505-ffa5-4681-8f04-792e4f49fb3f.PNG"
     },
     {
-      "Identity": "D:\\InternetShop\\GreenEnergyShop\\InternetShop\\wwwroot\\images\\header\\8938d95a-70b6-4288-aa71-4a0d1a28b207.PNG",
+      "Identity": "D:\\InternetShop\\GreenEnergyShop\\InternetShop\\wwwroot\\images\\header\\4fc6e099-813a-48bb-9c65-cf2c85cb80dc.PNG",
       "SourceId": "InternetShop.UI",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\InternetShop\\GreenEnergyShop\\InternetShop\\wwwroot\\",
       "BasePath": "_content/InternetShop.UI",
-      "RelativePath": "images/header/8938d95a-70b6-4288-aa71-4a0d1a28b207.PNG",
+      "RelativePath": "images/header/4fc6e099-813a-48bb-9c65-cf2c85cb80dc.PNG",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1153,7 +1153,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\header\\8938d95a-70b6-4288-aa71-4a0d1a28b207.PNG"
+      "OriginalItemSpec": "wwwroot\\images\\header\\4fc6e099-813a-48bb-9c65-cf2c85cb80dc.PNG"
+    },
+    {
+      "Identity": "D:\\InternetShop\\GreenEnergyShop\\InternetShop\\wwwroot\\images\\header\\e47a75ae-2f66-4af1-8630-558567505c63.PNG",
+      "SourceId": "InternetShop.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\InternetShop\\GreenEnergyShop\\InternetShop\\wwwroot\\",
+      "BasePath": "_content/InternetShop.UI",
+      "RelativePath": "images/header/e47a75ae-2f66-4af1-8630-558567505c63.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\header\\e47a75ae-2f66-4af1-8630-558567505c63.PNG"
     },
     {
       "Identity": "D:\\InternetShop\\GreenEnergyShop\\InternetShop\\wwwroot\\images\\icons\\shopping-cart.png",
