@@ -61,7 +61,7 @@ namespace InternetShop.Core.Services
             string path = Path.Combine(rootPath, @$"images\{folder}");
 
             if (Directory.Exists(@$"images\{folder}"))
-                throw new ArgumentException("Папка не знайдена");
+                return new List<string>();
 
             return Directory.GetFiles(path).Select(file => $@"\images\{folder}\{Path.GetFileName(file)}");
         }
