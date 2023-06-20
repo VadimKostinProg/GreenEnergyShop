@@ -41,7 +41,7 @@ namespace InternetShop.UI.Areas.Customer.Controllers
         [HttpGet]
         public async Task<IActionResult> Search(string query)
         {
-            await SetSearchTempData();
+            await SetDefaultTempData();
 
             IEnumerable<ProductResponse> products = await _productService.GetAllProducts(convertPrice: true);
 
@@ -69,8 +69,10 @@ namespace InternetShop.UI.Areas.Customer.Controllers
 
             if(productResponse == null)
             {
-                return View("Error", new ErrorViewModel());
+                return View("Error", new ErrorViewModel() { Description = "Обраного продукту не існує!"});
             }
+
+            this.SetDefaultTempData();
 
             return View(productResponse.ToProductViewModel());
         }
@@ -210,7 +212,7 @@ namespace InternetShop.UI.Areas.Customer.Controllers
             ViewBag.ImagesUrl = images;
         }
 
-        private async Task SetSearchTempData()
+        private async Task SetDefaultTempData()
         {
             ViewBag.Categories = await _categoryService.GetAllCategories();
         }
