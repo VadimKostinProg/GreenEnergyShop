@@ -17,6 +17,7 @@ namespace InternetShop.Infrastructure.DataBaseContext
         public DbSet<OrderHeader> OrderHeaders { get; set; }
         public DbSet<OrderDetails> OrderDetails { get; set; }
         public DbSet<Currency> Currencies { get; set; }
+        public DbSet<Article> Articles { get; set; }
 
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
@@ -33,6 +34,7 @@ namespace InternetShop.Infrastructure.DataBaseContext
             modelBuilder.Entity<OrderHeader>().ToTable("OrderHeaders");
             modelBuilder.Entity<OrderDetails>().ToTable("OrderDetails");
             modelBuilder.Entity<Currency>().ToTable("Currencies");
+            modelBuilder.Entity<Article>().ToTable("Articles");
         }
     }
 }
