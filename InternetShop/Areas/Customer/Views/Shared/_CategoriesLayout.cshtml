@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<div class="container-fluid">
+    <div class="dropdown d-md-none mb-3">
+        <button class="btn btn-secondary w-100 dropdown-toggle" type="button" data-toggle="dropdown">
+            Категорії
+        </button>
+        <div class="dropdown-menu mx-auto">
+            @foreach (CategoryResponse category in ViewBag.Categories)
+            {
+                <hr />
+                <a class="dropdown-item btn btn-secondary w-100 text-start" asp-area="Customer" asp-controller="Home" asp-action="Category" asp-route-categoryId="@category.Id">
+                    @category.Name
+                </a>
+            }
+            <hr />
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-12 col-md-3 col-lg-2 border-end d-none d-md-block">
+            <h2>Категорії</h2>
+            @foreach (CategoryResponse category in ViewBag.Categories)
+            {
+                <hr />
+                <a class="btn btn-secondary w-100 text-start" asp-area="Customer" asp-controller="Home" asp-action="Category" asp-route-categoryId="@category.Id">
+                    @category.Name
+                </a>
+            }
+            <hr />
+        </div>
+        <div class="col-12 col-md-9 col-lg-10">
+           @RenderBody();
+        </div>
+    </div>
+</div>
+
