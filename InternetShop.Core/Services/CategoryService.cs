@@ -87,10 +87,11 @@ namespace InternetShop.Core.Services
                 throw new ArgumentNullException(nameof(categoryUpdateRequest));
             }
 
-            if (_categoryRepository.GetAll().Any(category => category.Name == categoryUpdateRequest.Name))
-            {
+            Category? categorySearched = _categoryRepository.GetAll()
+                .FirstOrDefault(category => category.Name == categoryUpdateRequest.Name);
+
+            if (categorySearched != null && categorySearched.Id != categoryUpdateRequest.Id)
                 throw new ArgumentException("Категорія з таким ім'ям вже існує.");
-            }
 
             Category categoryToUpdate = categoryUpdateRequest.ToCategory();
 
