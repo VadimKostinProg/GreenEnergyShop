@@ -27,6 +27,9 @@ namespace InternetShop.Core.Services
             if(_articleRepository.GetAll().Any(article => article.Title == articleAddRequest.Title))
                 throw new ArgumentException("Стаття з такою назвою вже існує");
 
+            if (articleAddRequest.Description == null)
+                articleAddRequest.Description = string.Empty;
+
             Article article = articleAddRequest.ToArticle();
             article.Id = Guid.NewGuid();
 
@@ -82,6 +85,9 @@ namespace InternetShop.Core.Services
 
             if (articleSearched != null && articleSearched.Id != articleUpdateRequest.Id)
                 throw new ArgumentException("Стаття з таким ім'ям вже існує.");
+
+            if (articleUpdateRequest.Description == null)
+                articleUpdateRequest.Description = string.Empty;
 
             Article articleToUpdate = articleUpdateRequest.ToArticle();
             Article? updatedArticle = _articleRepository.Update(articleToUpdate);

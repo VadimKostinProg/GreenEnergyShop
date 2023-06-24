@@ -1,4 +1,5 @@
-﻿using InternetShop.Core.DTO;
+﻿using InternetShop.Core.Domain.Entities;
+using InternetShop.Core.DTO;
 using InternetShop.Core.ServiceContracts;
 using InternetShop.UI.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -21,12 +22,19 @@ namespace InternetShop.UI.Areas.Customer.Controllers
         [Route("AboutUs")]
         public async Task<IActionResult> AboutUs()
         {
-            var article = await _articleService.GetArticleByTitle("Про нас");
+            try
+            {
+                var article = await _articleService.GetArticleByTitle("Про нас");
 
-            if(article == null)
-                return View();
+                if (article == null)
+                    return View();
 
-            return View("Article", article.ToArticleUpdateRequest());
+                return View("Article", article.ToArticleUpdateRequest());
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new ErrorViewModel() { Description = ex.Message });
+            }
         }
 
         [AllowAnonymous]
@@ -34,12 +42,19 @@ namespace InternetShop.UI.Areas.Customer.Controllers
         [Route("PricingAndDelivery")]
         public async Task<IActionResult> PricingAndDelivery()
         {
-            var article = await _articleService.GetArticleByTitle("Доставка та оплата");
+            try
+            {
+                var article = await _articleService.GetArticleByTitle("Доставка та оплата");
 
-            if (article == null)
-                return View();
+                if (article == null)
+                    return View();
 
-            return View("Article", article.ToArticleUpdateRequest());
+                return View("Article", article.ToArticleUpdateRequest());
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new ErrorViewModel() { Description = ex.Message });
+            }
         }
 
         [AllowAnonymous]
@@ -47,35 +62,57 @@ namespace InternetShop.UI.Areas.Customer.Controllers
         [Route("Contacts")]
         public async Task<IActionResult> Contacts()
         {
-            var article = await _articleService.GetArticleByTitle("Контакти");
+            try
+            {
+                var article = await _articleService.GetArticleByTitle("Контакти");
 
-            if (article == null)
-                return View();
+                if (article == null)
+                    return View();
 
-            return View("Article", article.ToArticleUpdateRequest());
+                return View("Article", article.ToArticleUpdateRequest());
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new ErrorViewModel() { Description = ex.Message });
+            }
         }
 
         [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Edit(Guid articleId)
         {
-            var article = await _articleService.GetArticleById(articleId);
+            try
+            {
+                var article = await _articleService.GetArticleById(articleId);
 
-            if (article == null)
-                return View("Error", new ErrorViewModel() { Description = "Стаття не знайдена" });
+                if (article == null)
+                    return View("Error", new ErrorViewModel() { Description = "Стаття не знайдена" });
 
-            return View(article.ToArticleUpdateRequest());
+                return View(article.ToArticleUpdateRequest());
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new ErrorViewModel() { Description = ex.Message });
+            }
         }
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> PostArticle(ArticleUpdateRequest articleUpdateRequest)
         {
-            var articleUpdated = await _articleService.UpdateArticle(articleUpdateRequest);
-            if (articleUpdated == null)
-                return View();
+            try
+            {
+                var articleUpdated = await _articleService.UpdateArticle(articleUpdateRequest);
 
-            return View("Article", articleUpdated.ToArticleUpdateRequest());
+                if (articleUpdated == null)
+                    return View();
+
+                return View("Article", articleUpdated.ToArticleUpdateRequest());
+            }
+            catch(Exception ex)
+            {
+                return View("Error", new ErrorViewModel() { Description = ex.Message });
+            }
         }
     }
 }

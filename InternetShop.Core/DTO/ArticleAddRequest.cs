@@ -14,8 +14,7 @@ namespace InternetShop.Core.DTO
         [MaxLength(20)]
         public string Title { get; set; } = null!;
 
-        [Required]
-        public string Description { get; set; } = null!;
+        public string Description { get; set; } = string.Empty;
 
         public Article ToArticle()
         {
