@@ -21,13 +21,13 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link">Про нас</a>
+                            <a class="nav-link" asp-controller="Articles" asp-action="AboutUs">Про нас</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Доставка та оплата</a>
+                            <a class="nav-link" asp-controller="Articles" asp-action="PricingAndDelivery">Доставка та оплата</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Контакти</a>
+                            <a class="nav-link" asp-controller="Articles" asp-action="Contacts">Контакти</a>
                         </li>
                         @if (User.IsInRole("Admin"))
                         {
@@ -67,7 +67,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="https://cdn.tiny.cloud/1/ysejdnmwo2cch2p1y49mejx2xnxjsgh0jkwjcunf2jntr5tj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/3bfcculnmi7ovm1pk0qbq36hw51jixd3ysdr6trrm3r7a5gd/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"

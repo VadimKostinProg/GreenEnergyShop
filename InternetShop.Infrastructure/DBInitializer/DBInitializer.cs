@@ -1,4 +1,6 @@
-﻿using InternetShop.Infrastructure.DataBaseContext;
+﻿using InternetShop.Core.DTO;
+using InternetShop.Core.ServiceContracts;
+using InternetShop.Infrastructure.DataBaseContext;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -16,15 +18,19 @@ namespace InternetShop.Infrastructure.DBInitializer
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ApplicationDbContext _db;
 
+        private readonly IArticleService _articleService;
+
         private readonly IConfiguration _config;
 
         public DBInitializer(UserManager<IdentityUser> userManager, 
-            RoleManager<IdentityRole> roleManager, ApplicationDbContext db, IConfiguration configuration)
+        RoleManager<IdentityRole> roleManager, ApplicationDbContext db, IConfiguration configuration,
+        IArticleService articleService)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _db = db;
             _config = configuration;
+            _articleService = articleService;
         }
 
         public void Initialize()
@@ -55,6 +61,41 @@ namespace InternetShop.Infrastructure.DBInitializer
 
                 IdentityUser user = _userManager.FindByEmailAsync("tolkostin2@gmail.com").GetAwaiter().GetResult();
                 _userManager.AddToRoleAsync(user, "Admin").GetAwaiter().GetResult();
+            }
+
+
+
+            if(_articleService.GetArticleByTitle("Про нас").GetAwaiter().GetResult() == null)
+            {
+                var articleAddRequest = new ArticleAddRequest()
+                {
+                    Title = "Про нас",
+                    Description = string.Empty
+                };
+
+                _articleService.AddArticle(articleAddRequest).GetAwaiter().GetResult();
+            }
+
+            if (_articleService.GetArticleByTitle("Доставка та оплата").GetAwaiter().GetResult() == null)
+            {
+                var articleAddRequest = new ArticleAddRequest()
+                {
+                    Title = "Доставка та оплата",
+                    Description = string.Empty
+                };
+
+                _articleService.AddArticle(articleAddRequest).GetAwaiter().GetResult();
+            }
+
+            if (_articleService.GetArticleByTitle("Контакти").GetAwaiter().GetResult() == null)
+            {
+                var articleAddRequest = new ArticleAddRequest()
+                {
+                    Title = "Контакти",
+                    Description = string.Empty
+                };
+
+                _articleService.AddArticle(articleAddRequest).GetAwaiter().GetResult();
             }
 
             return;

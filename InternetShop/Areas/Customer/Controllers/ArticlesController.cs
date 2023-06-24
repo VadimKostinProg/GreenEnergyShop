@@ -1,50 +1,81 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using InternetShop.Core.DTO;
+using InternetShop.Core.ServiceContracts;
+using InternetShop.UI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InternetShop.UI.Areas.Customer.Controllers
 {
+    [Area("Customer")]
     public class ArticlesController : Controller
     {
-        [AllowAnonymous]
-        [HttpGet]
-        public IActionResult AboutUs()
-        {
-            return View();
-        }
+        private readonly IArticleService _articleService;
 
-        [Authorize(Roles = "Admin")]
-        [HttpPost]
-        public IActionResult AboutUs(string article)
+        public ArticlesController(IArticleService articleService)
         {
-            return View();
+            _articleService = articleService;
         }
 
         [AllowAnonymous]
         [HttpGet]
-        public IActionResult PricingAndDelivery()
+        [Route("AboutUs")]
+        public async Task<IActionResult> AboutUs()
         {
-            return View();
-        }
+            var article = await _articleService.GetArticleByTitle("Про нас");
 
-        [Authorize(Roles = "Admin")]
-        [HttpPost]
-        public IActionResult PricingAndDelivery(string article)
-        {
-            return View();
+            if(article == null)
+                return View();
+
+            return View("Article", article.ToArticleUpdateRequest());
         }
 
         [AllowAnonymous]
         [HttpGet]
-        public IActionResult Contacts()
+        [Route("PricingAndDelivery")]
+        public async Task<IActionResult> PricingAndDelivery()
         {
-            return View();
+            var article = await _articleService.GetArticleByTitle("Доставка та оплата");
+
+            if (article == null)
+                return View();
+
+            return View("Article", article.ToArticleUpdateRequest());
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("Contacts")]
+        public async Task<IActionResult> Contacts()
+        {
+            var article = await _articleService.GetArticleByTitle("Контакти");
+
+            if (article == null)
+                return View();
+
+            return View("Article", article.ToArticleUpdateRequest());
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid articleId)
+        {
+            var article = await _articleService.GetArticleById(articleId);
+
+            if (article == null)
+                return View("Error", new ErrorViewModel() { Description = "Стаття не знайдена" });
+
+            return View(article.ToArticleUpdateRequest());
         }
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public IActionResult Contacts(string article)
+        public async Task<IActionResult> PostArticle(ArticleUpdateRequest articleUpdateRequest)
         {
-            return View();
+            var articleUpdated = await _articleService.UpdateArticle(articleUpdateRequest);
+            if (articleUpdated == null)
+                return View();
+
+            return View("Article", articleUpdated.ToArticleUpdateRequest());
         }
     }
 }
