@@ -16,9 +16,11 @@ namespace InternetShop.Core.DTO
 
         public string Description { get; set; } = null!;
 
+        public bool IsHeaderArticle { get; set; }
+
         public ArticleUpdateRequest ToArticleUpdateRequest()
         {
-            return new ArticleUpdateRequest() { Id = this.Id, Title = this.Title, Description = this.Description };
+            return new ArticleUpdateRequest() { Id = this.Id, Title = this.Title, Description = this.Description, IsHeaderArticle = this.IsHeaderArticle };
         }
 
         public override bool Equals(object? obj)
@@ -48,7 +50,8 @@ namespace InternetShop.Core.DTO
             {
                 Id = article.Id,
                 Title = article.Title,
-                Description = article.Description
+                Description = article.Description,
+                IsHeaderArticle = article.IsHeaderArticle
             };
         }
     }

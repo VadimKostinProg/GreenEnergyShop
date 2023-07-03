@@ -17,6 +17,7 @@ namespace InternetShop.UI.Areas.Customer.Controllers
             _articleService = articleService;
         }
 
+        #region HEADER ARTICLES
         [AllowAnonymous]
         [HttpGet]
         [Route("AboutUs")]
@@ -102,6 +103,7 @@ namespace InternetShop.UI.Areas.Customer.Controllers
         {
             try
             {
+                articleUpdateRequest.IsHeaderArticle = true;
                 var articleUpdated = await _articleService.UpdateArticle(articleUpdateRequest);
 
                 if (articleUpdated == null)
@@ -110,6 +112,24 @@ namespace InternetShop.UI.Areas.Customer.Controllers
                 return View("Article", articleUpdated.ToArticleUpdateRequest());
             }
             catch(Exception ex)
+            {
+                return View("Error", new ErrorViewModel() { Description = ex.Message });
+            }
+        }
+        #endregion
+
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("{articleTitle}")]
+        public async Task<IActionResult> GetArticle([FromRoute] string articleTitle)
+        {
+            try
+            {
+                var article = await _articleService.GetArticleByTitle(articleTitle);
+
+                return View("Article", article);
+            }
+            catch (Exception ex)
             {
                 return View("Error", new ErrorViewModel() { Description = ex.Message });
             }

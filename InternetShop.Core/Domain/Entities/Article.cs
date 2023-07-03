@@ -18,5 +18,8 @@ namespace InternetShop.Core.Domain.Entities
 
         [Required]
         public string Description { get; set; } = null!;
+
+        [Required]
+        public bool IsHeaderArticle { get; set; }
     }
 }

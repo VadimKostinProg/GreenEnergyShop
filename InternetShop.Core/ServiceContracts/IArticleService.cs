@@ -22,8 +22,9 @@ namespace InternetShop.Core.ServiceContracts
         /// <summary>
         /// Method for reading all articles from the data base.
         /// </summary>
+        /// <param name="includeHeaders">Flag that determines whether include header articles or not.</param>
         /// <returns>Collection IEnumerable of articles.</returns>
-        Task<IEnumerable<ArticleResponse>> GetAllArticles();
+        Task<IEnumerable<ArticleResponse>> GetAllArticles(bool includeHeaders = true);
 
         /// <summary>
         /// Method for reading article by it`s id.

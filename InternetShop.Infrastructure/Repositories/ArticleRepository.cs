@@ -65,6 +65,7 @@ namespace InternetShop.Infrastructure.Repositories
 
             article.Title = entity.Title;
             article.Description = entity.Description;
+            article.IsHeaderArticle = entity.IsHeaderArticle;
 
             return article;
         }
