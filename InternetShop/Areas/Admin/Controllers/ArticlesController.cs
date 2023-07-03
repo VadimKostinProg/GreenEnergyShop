@@ -26,13 +26,13 @@ namespace InternetShop.UI.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> AddArticle()
+        public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddArticles(ArticleAddRequest articleAddRequest)
+        public async Task<IActionResult> Create(ArticleAddRequest articleAddRequest)
         {
             try
             {
@@ -75,7 +75,7 @@ namespace InternetShop.UI.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> DeletePage([FromQuery] Guid articleId)
+        public async Task<IActionResult> Delete([FromQuery] Guid articleId)
         {
             var article = await _articleService.GetArticleById(articleId);
 
@@ -88,11 +88,11 @@ namespace InternetShop.UI.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Delete(Guid articleId)
+        public async Task<IActionResult> Delete(ArticleResponse articleResponse)
         {
             try
             {
-                await _articleService.DeleteArticle(articleId);
+                await _articleService.DeleteArticle(articleResponse.Id);
                 return RedirectToAction("Index");
             }
             catch(Exception ex)

@@ -1,0 +1,49 @@
+﻿@model ArticleUpdateRequest
+
+@{
+    ViewBag.Title = "Редагування статті";
+}
+
+<form asp-action="Edit" method="post">
+    <input asp-for="Id" hidden />
+    <div class="container border p-3 mt-4 w-75">
+        <h1 class="m-3">Редагування статті</h1>
+        <div class="row p-2">
+            <div class="col-3">
+                <label asp-for="Title" class="form-label lead pt-2">Назва</label>
+            </div>
+            <div class="col-9">
+                <input asp-for="Title" class="form-control" />
+            </div>
+        </div>
+        <label asp-for="Description" class="form-label lead m-2 mb-3">Опис</label>
+        <textarea asp-for="Description"></textarea>
+        <div class="row mt-3">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary form-control">Редагувати</button>
+            </div>
+            <div class="col-6">
+                <a asp-action="Index" class="btn btn-danger form-control">Назад</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' },
+            ]
+        });
+    </script>
+    @{
+        <partial name="_ValidationScriptsPartial.cshtml" />
+    }
+}
