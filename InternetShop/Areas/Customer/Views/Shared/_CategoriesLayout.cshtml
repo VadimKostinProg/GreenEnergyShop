@@ -29,9 +29,21 @@
                 </a>
             }
             <hr />
+            @if (ViewBag.Articles.Count > 0)
+            {
+                <h2 class="mt-5">Статті</h2>
+
+                @foreach (ArticleResponse article in ViewBag.Articles)
+                {
+                    <hr />
+                    <a class="btn btn-secondary w-100 text-start" asp-area="Customer" asp-controller="CustomerArticles" asp-action="Article" asp-route-articleId="@article.Id">
+                        @article.Title
+                    </a>
+                }
+            }
         </div>
         <div class="col-12 col-md-9 col-lg-10">
-           @RenderBody()
+            @RenderBody()
         </div>
     </div>
 </div>

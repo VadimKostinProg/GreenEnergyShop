@@ -108,12 +108,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/Articles/Article.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcQXJ0aWNsZXNcQXJ0aWNsZS5jc2h0bWw=
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/CustomerArticles/Article.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcQ3VzdG9tZXJBcnRpY2xlc1xBcnRpY2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/Articles/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcQXJ0aWNsZXNcRWRpdC5jc2h0bWw=
+[D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/CustomerArticles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcQ3VzdG9tZXJBcnRpY2xlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/InternetShop/GreenEnergyShop/InternetShop/Areas/Customer/Views/Home/Category.cshtml]
