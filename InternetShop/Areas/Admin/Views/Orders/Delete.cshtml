@@ -7,20 +7,20 @@
         <h2>Видалення замовлень в проміжку дат</h2>
         <div class="row mb-3">
             <div class="col-6">
-                <label for="start">Початок інтервалу</label>
+                <label class="lead" for="start">Початок інтервалу</label>
                 <input name="start" type="date" class="form-control" id="startDate" />
             </div>
             <div class="col-6">
-                <label for="end">Кінець інтервалу</label>
+                <label class="lead" for="end">Кінець інтервалу</label>
                 <input name="end" type="date" class="form-control" id="endDate" />
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <button type="submit" class="btn btn-danger">Видалити</button>
+                <button type="submit" class="btn btn-danger form-control">Видалити</button>
             </div>
             <div class="col-6">
-                <a class="btn btn-secondary" asp-action="Index">Назад</a>
+                <a class="btn btn-secondary form-control" asp-action="Index">Назад</a>
             </div>
         </div>
     </div>

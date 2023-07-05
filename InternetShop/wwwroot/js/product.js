@@ -22,7 +22,7 @@ function showCharacteristics(characteristics) {
         let newElement = document.createElement('div');
         newElement.className = 'row mb-3';
         newElement.innerHTML = '<div class="col-4">' +
-            `<label asp-for="Characteristics" class="pt-3">${characteristics[i]}</label>` +
+            `<label asp-for="Characteristics" class="p-3 lead">${characteristics[i]}</label>` +
             '</div>' +
             '<div class="col-8">' +
             `<input type="text" name="Characteristics[${i}]" class="form-control" />` +

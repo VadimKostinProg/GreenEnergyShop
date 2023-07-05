@@ -4,8 +4,8 @@
     ViewBag.Title = "Замовлення";
 }
 
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row p-5 pt-0">
         <div class="container">
             <div class="row pt-4 mb-3">
                 <div class="col-6">
@@ -20,31 +20,31 @@
         <table id="productsTable" class="table table-bordered table-striped w-100">
             <thead>
                 <tr>
-                    <th>Дата</th>
-                    <th>Час</th>
-                    <th>Номер замовника</th>
-                    <th>Зручний час для дзвінку</th>
-                    <th>Деталі замовлення</th>
-                    <th>Загальна вартість замовлення</th>
-                    <th style="width:15%">Статус</th>
+                    <th class="h4">Дата</th>
+                    <th class="h4">Час</th>
+                    <th class="h4">Номер замовника</th>
+                    <th class="h4">Зручний час для дзвінку</th>
+                    <th class="h4">Деталі замовлення</th>
+                    <th class="h4">Загальна вартість замовлення</th>
+                    <th class="h4" style="width:15%">Статус</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (OrderResponse order in Model)
                 {
                     <tr>
-                        <td>@order.OrderConfirmationTime.ToShortDateString()</td>
-                        <td>@order.OrderConfirmationTime.ToShortTimeString()</td>
-                        <td>@order.CustomerPhoneNumber</td>
-                        <td>@order.TimeToCall</td>
+                        <td class="lead">@order.OrderConfirmationTime.ToShortDateString()</td>
+                        <td class="lead">@order.OrderConfirmationTime.ToShortTimeString()</td>
+                        <td class="lead">@order.CustomerPhoneNumber</td>
+                        <td class="lead">@order.TimeToCall</td>
                         <td>
                             <a class="btn btn-primary" asp-action="Details" asp-route-orderId="@order.Id">Деталі</a>
                         </td>
-                        <td>@order.TotalCost</td>
+                        <td class="lead">@order.TotalCost</td>
                         <td id="confirmTile{@order.Id}">
                             @if (order.Confirmed)
                             {
-                                <p>Підтверджено</p>
+                                <p class="lead">Підтверджено</p>
                             }
                             else
                             {

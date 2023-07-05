@@ -22,17 +22,24 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>Ідентифікатор</th>
-                    <th>Ім'я</th>
-                    <th style="width:15%">Опції</th>
+                    <th class="h4">Ім'я</th>
+                    <th class="h4">Характеристики</th>
+                    <th class="h4" style="width:15%">Опції</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (CategoryResponse category in Model)
                 {
                     <tr>
-                        <td>@category.Id</td>
-                        <td>@category.Name</td>
+                        <td class="lead">@category.Name</td>
+                        <td>
+                            @foreach(string characteristic in category.CharacteristicsList)
+                            {
+                                <div class="row mb-2 lead">
+                                    @characteristic
+                                </div>
+                            }
+                        </td>
                         <td style="width:15%">
                             <a asp-controller="Categories" asp-action="Edit" asp-route-categoryId="@category.Id" class="btn btn-dark mb-2">
                                 <i class="bi bi-pencil-square"></i>
