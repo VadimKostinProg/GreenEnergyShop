@@ -5,7 +5,7 @@
 }
 
 <form asp-controller="Products" asp-action="Create" method="post" enctype="multipart/form-data">
-    <div class="container border p-3 mt-4">
+    <div class="container border mt-4">
         <div class="row">
             <div class="col-6">
                 <h2 class="text-primary mt-3">
@@ -13,7 +13,7 @@
                 </h2>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="Name" class="pt-3">Назва</label>
+                        <label asp-for="Name" class="p-3 lead">Назва</label>
                     </div>
                     <div class="col-9">
                         <input type="text" asp-for="Name" class="form-control" />
@@ -22,7 +22,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="Description" class="pt-3">Опис</label>
+                        <label asp-for="Description" class="p-3 lead">Опис</label>
                     </div>
                     <div class="col-9">
                         <textarea type="text" asp-for="Description" class="form-control"></textarea>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="CategoryId" class="pt-3">Категорія</label>
+                        <label asp-for="CategoryId" class="p-3 lead">Категорія</label>
                     </div>
                     <div class="col-9">
                         <select asp-for="CategoryId" asp-items="@ViewBag.CategoryList" class="form-control" id="category-select">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="Currency" class="pt-3">Валюта ціни</label>
+                        <label asp-for="Currency" class="p-3 lead">Валюта ціни</label>
                     </div>
                     <div class="col-9">
                         <select asp-for="Currency" asp-items="@ViewBag.CurrencyList" class="form-control">
@@ -51,7 +51,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="Price" class="pt-3">Ціна</label>
+                        <label asp-for="Price" class="p-3 lead">Ціна</label>
                     </div>
                     <div class="col-9">
                         <input type="number" asp-for="Price" class="form-control" />
@@ -60,7 +60,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="ImageUrl" class="pt-3">Зображення</label>
+                        <label asp-for="ImageUrl" class="p-3 lead">Зображення</label>
                     </div>
                     <div class="col-9">
                         <input type="file" name="image" class="form-control border-0" />

@@ -5,7 +5,7 @@
 }
 
 <form asp-controller="Products" asp-action="Edit" method="post" enctype="multipart/form-data">
-    <div class="container border p-3 mt-4">
+    <div class="container border mt-4">
         <div class="row">
             <div class="col-6">
                 <h2 class="text-primary mt-3">
@@ -14,7 +14,7 @@
                 <input asp-for="Id" hidden />
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="Name" class="pt-3">Назва</label>
+                        <label asp-for="Name" class="p-3 lead">Назва</label>
                     </div>
                     <div class="col-9">
                         <input type="text" asp-for="Name" class="form-control" />
@@ -23,7 +23,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="Description" class="pt-3">Опис</label>
+                        <label asp-for="Description" class="p-3 lead">Опис</label>
                     </div>
                     <div class="col-9">
                         <textarea type="text" asp-for="Description" class="form-control"></textarea>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="CategoryId" class="pt-3">Категорія</label>
+                        <label asp-for="CategoryId" class="p-3 lead">Категорія</label>
                     </div>
                     <div class="col-9">
                         <select asp-for="CategoryId" asp-items="@ViewBag.CategoryList" class="form-control" id="category-select">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="Currency" class="pt-3">Валюта ціни</label>
+                        <label asp-for="Currency" class="p-3 lead">Валюта ціни</label>
                     </div>
                     <div class="col-9">
                         <select asp-for="Currency" asp-items="@ViewBag.CurrencyList" class="form-control">
@@ -52,7 +52,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="Price" class="pt-3">Ціна</label>
+                        <label asp-for="Price" class="p-3 lead">Ціна</label>
                     </div>
                     <div class="col-9">
                         <input type="number" step=".01" asp-for="Price" class="form-control" />
@@ -61,15 +61,15 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="IsDiscountActive" class="pt-3">Активна знижка</label>
+                        <label asp-for="IsDiscountActive" class="p-3 lead">Активна знижка</label>
                     </div>
-                    <div class="col-9">
+                    <div class="col-9 d-flex align-content-center">
                         <input type="checkbox" onchange="changeVisibility()" id="isDiscountActiveCheckBox" asp-for="IsDiscountActive" />
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="DiscountPrice" class="pt-3">Ціна зі знижкою</label>
+                        <label asp-for="DiscountPrice" class="p-3 lead">Ціна зі знижкою</label>
                     </div>
                     <div class="col-9">
                         <input type="number" step=".01" asp-for="DiscountPrice" id="discountPriceInput" class="form-control" />
@@ -78,15 +78,15 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="IsPopular" class="pt-3">Популярне</label>
+                        <label asp-for="IsPopular" class="p-3 lead">Популярне</label>
                     </div>
-                    <div class="col-9">
+                    <div class="col-9 d-flex align-content-center">
                         <input type="checkbox" asp-for="IsPopular" />
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="Status" class="pt-3">Статус</label>
+                        <label asp-for="Status" class="p-3 lead">Статус</label>
                     </div>
                     <div class="col-9">
                         <select asp-for="Status" asp-items="@ViewBag.StatusList" class="form-control">
@@ -95,7 +95,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <label asp-for="ImageUrl" class="pt-3">Зображення</label>
+                        <label asp-for="ImageUrl" class="p-3 lead">Зображення</label>
                     </div>
                     <div class="col-9">
                         <input asp-for="ImageUrl" hidden />
@@ -112,7 +112,7 @@
                     {
                         <div class="row mb-3">
                             <div class="col-4">
-                                <label asp-for="Characteristics" class="pt-3">@ViewBag.CharacteristicsName[i]</label>
+                                <label asp-for="Characteristics" class="p-3 lead">@ViewBag.CharacteristicsName[i]</label>
                             </div>
                             <div class="col-8">
                                 <input type="text" name="Characteristics[@i]" class="form-control" value="@Model.Characteristics[i]" />

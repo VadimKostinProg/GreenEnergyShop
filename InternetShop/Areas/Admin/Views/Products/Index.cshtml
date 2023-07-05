@@ -4,8 +4,8 @@
     ViewBag.Title = "Продукти";
 }
 
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row p-5 pt-0">
         <div class="container">
             <div class="row pt-4">
                 <div class="col-6">
@@ -22,15 +22,15 @@
         <table id="productsTable" class="table table-bordered table-striped w-100">
             <thead>
                 <tr>
-                    <th>Зображення</th>
-                    <th>Назва</th>
-                    <th>Категорія</th>
-                    <th>Ціна</th>
-                    <th>Активна знижка</th>
-                    <th>Ціна зі знижкою</th>
-                    <th>Популярне</th>
-                    <th>Статус</th>
-                    <th style="width:15%">Опції</th>
+                    <th class="h4">Зображення</th>
+                    <th class="h4">Назва</th>
+                    <th class="h4">Категорія</th>
+                    <th class="h4">Ціна</th>
+                    <th class="h4">Активна знижка</th>
+                    <th class="h4">Ціна зі знижкою</th>
+                    <th class="h4">Популярне</th>
+                    <th class="h4">Статус</th>
+                    <th class="h4" style="width:15%">Опції</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,9 +38,9 @@
                 {
                     <tr>
                         <td><img src="@product.ImageUrl" class="img-fluid" /></td>
-                        <td>@product.Name</td>
-                        <td>@product.Category?.Name</td>
-                        <td>@product.Price</td>
+                        <td class="lead">@product.Name</td>
+                        <td class="lead">@product.Category?.Name</td>
+                        <td class="lead">@product.Price</td>
                         <td>
                             @if (product.IsDiscountActive)
                             {
@@ -51,7 +51,7 @@
                                 <i class="bi bi-x-square"></i>
                             }
                         </td>
-                        <td>@product.DiscountPrice</td>
+                        <td class="lead">@product.DiscountPrice</td>
                         <td>
                             @if (product.IsPopular)
                             {
@@ -65,13 +65,13 @@
                         @switch (product.Status)
                         {
                             case ProductStatus.InStock:
-                                <td style="color: green">Є в наявності</td>
+                                <td class="lead" color: green">Є в наявності</td>
                                 break;
                             case ProductStatus.Ends:
-                                <td style="color: orangered">Закінчується</td>
+                                <td class="lead" style="color: orangered">Закінчується</td>
                                 break;
                             case ProductStatus.NotAvialable:
-                                <td style="color: red">Немає в наявності</td>
+                                <td class="lead" style="color: red">Немає в наявності</td>
                                 break;
                         }
                         <td>

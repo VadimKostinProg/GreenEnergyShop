@@ -17,11 +17,11 @@
         <table id="productsTable" class="table table-bordered table-striped w-100">
             <thead>
                 <tr>
-                    <th>Назва продукту</th>
-                    <th>Категорія</th>
-                    <th>Ціна</th>
-                    <th>Кількість</th>
-                    <th>Вартість</th>
+                    <th class="h4">Назва продукту</th>
+                    <th class="h4">Категорія</th>
+                    <th class="h4">Ціна</th>
+                    <th class="h4">Кількість</th>
+                    <th class="h4">Вартість</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,17 +31,17 @@
                 @foreach (OrderDetailsResponse orderDetails in Model)
                 {
                     <tr>
-                        <td>@orderDetails.ProductName</td>
-                        <td>@orderDetails.CategoryName</td>
-                        <td>@orderDetails.Price</td>
-                        <td>@orderDetails.Quantity</td>
-                        <td>@orderDetails.Cost</td>
+                        <td class="lead">@orderDetails.ProductName</td>
+                        <td class="lead">@orderDetails.CategoryName</td>
+                        <td class="lead">@orderDetails.Price</td>
+                        <td class="lead">@orderDetails.Quantity</td>
+                        <td class="lead">@orderDetails.Cost</td>
                     </tr>
                     totalCost += orderDetails.Cost;
                 }
                 <tr>
-                    <td colspan="4">Загальна вартість:</td>
-                    <td>@totalCost</td>
+                    <td class="lead" colspan="4">Загальна вартість:</td>
+                    <td class="lead">@totalCost</td>
                 </tr>
             </tbody>
         </table>

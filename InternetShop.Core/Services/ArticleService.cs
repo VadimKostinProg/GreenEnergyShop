@@ -50,9 +50,16 @@ namespace InternetShop.Core.Services
             return result;
         }
 
-        public async Task<IEnumerable<ArticleResponse>> GetAllArticles()
+        public async Task<IEnumerable<ArticleResponse>> GetAllArticles(bool includeHeaders = true)
         {
-            return _articleRepository.GetAll().Select(article => article.ToArticleResponse());
+            var articles = _articleRepository.GetAll().Select(article => article.ToArticleResponse());
+
+            if (!includeHeaders)
+            {
+                articles = articles.Where(article => article.IsHeaderArticle == false);
+            }
+
+            return articles;
         }
 
         public async Task<ArticleResponse?> GetArticleById(Guid id)

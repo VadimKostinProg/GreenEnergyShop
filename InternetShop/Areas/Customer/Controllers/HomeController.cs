@@ -20,16 +20,20 @@ namespace InternetShop.UI.Areas.Customer.Controllers
         private readonly IProductService _productService;
         private readonly IOrderService _orderService;
         private readonly IPageHeaderService _pageHeaderService;
+        private readonly IArticleService _articleService;
 
         public HomeController(ILogger<HomeController> logger, ICategoryService categoryService, 
-            IProductService productService, IOrderService orderService, IPageHeaderService pageHeaderService)
+            IProductService productService, IOrderService orderService, IPageHeaderService pageHeaderService, 
+            IArticleService articleService)
         {
             _logger = logger;
             _categoryService = categoryService;
             _productService = productService;
             _orderService = orderService;
             _pageHeaderService = pageHeaderService;
+            _articleService = articleService;
         }
+
         #region API CALLS
         public async Task<IActionResult> Index()
         {
@@ -41,7 +45,7 @@ namespace InternetShop.UI.Areas.Customer.Controllers
         [HttpGet]
         public async Task<IActionResult> Search(string query)
         {
-            await SetDefaultTempData();
+            await this.SetDefaultTempData();
 
             IEnumerable<ProductResponse> products = await _productService.GetAllProducts(convertPrice: true);
 
@@ -72,7 +76,7 @@ namespace InternetShop.UI.Areas.Customer.Controllers
                 return View("Error", new ErrorViewModel() { Description = "Обраного продукту не існує!"});
             }
 
-            this.SetDefaultTempData();
+            await this.SetDefaultTempData();
 
             return View(productResponse.ToProductViewModel());
         }
@@ -87,7 +91,7 @@ namespace InternetShop.UI.Areas.Customer.Controllers
                 return View("Error");
             }
 
-            ViewBag.Categories = await _categoryService.GetAllCategories();
+            await this.SetDefaultTempData();
 
             ViewBag.CategoryName = categoryResponse.Name;
 
@@ -177,7 +181,7 @@ namespace InternetShop.UI.Areas.Customer.Controllers
         #region TEMP DATA SET
         private async Task SetIndexTempData()
         {
-            ViewBag.Categories = await _categoryService.GetAllCategories();
+            await this.SetDefaultTempData();
 
             IEnumerable<ProductResponse> products = await _productService.GetAllProducts(convertPrice: true);
 
@@ -210,11 +214,17 @@ namespace InternetShop.UI.Areas.Customer.Controllers
             List<string> images = _pageHeaderService.GetImagesOfHeader().ToList();
             ViewBag.IsHeaderPresent = images.Count > 0;
             ViewBag.ImagesUrl = images;
+
+            
         }
 
         private async Task SetDefaultTempData()
         {
-            ViewBag.Categories = await _categoryService.GetAllCategories();
+            var categories = await _categoryService.GetAllCategories();
+            ViewBag.Categories = categories.ToList();
+
+            var articles = await _articleService.GetAllArticles(includeHeaders: false);
+            ViewBag.Articles = articles.ToList();
         }
 
         private void SetOrderTempData()

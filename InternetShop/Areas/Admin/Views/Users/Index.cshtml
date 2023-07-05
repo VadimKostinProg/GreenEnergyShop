@@ -22,16 +22,16 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>Пошта</th>
-                    <th>Номер</th>
+                    <th class="h4">Пошта</th>
+                    <th class="h4">Номер</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var user in Model)
                 {
                     <tr>
-                        <td>@user.Email</td>
-                        <td>@user.PhoneNumber</td>
+                        <td class="lead">@user.Email</td>
+                        <td class="lead">@user.PhoneNumber</td>
                     </tr>
                 }
             </tbody>

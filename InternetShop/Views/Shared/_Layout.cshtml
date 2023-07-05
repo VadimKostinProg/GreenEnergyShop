@@ -21,13 +21,13 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Customer" asp-controller="Articles" asp-action="AboutUs">Про нас</a>
+                            <a class="nav-link" asp-area="Customer" asp-controller="CustomerArticles" asp-action="AboutUs">Про нас</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Customer" asp-controller="Articles" asp-action="PricingAndDelivery">Доставка та оплата</a>
+                            <a class="nav-link" asp-area="Customer" asp-controller="CustomerArticles" asp-action="PricingAndDelivery">Доставка та оплата</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Customer" asp-controller="Articles" asp-action="Contacts">Контакти</a>
+                            <a class="nav-link" asp-area="Customer" asp-controller="CustomerArticles" asp-action="Contacts">Контакти</a>
                         </li>
                         @if (User.IsInRole("Admin"))
                         {
@@ -38,6 +38,7 @@
                                     <a class="dropdown-item" asp-area="Admin" asp-controller="Categories" asp-action="Index">Категорії</a>
                                     <a class="dropdown-item" asp-area="Admin" asp-controller="Products" asp-action="Index">Продукти</a>
                                     <a class="dropdown-item" asp-area="Admin" asp-controller="PageHeader" asp-action="Index">Шапка сайту</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Articles" asp-action="Index">Статті</a>
                                     <a class="dropdown-item" asp-area="Admin" asp-controller="Currency" asp-action="Index">Курс валют</a>
                                     <hr />
                                     <a class="dropdown-item" asp-area="Admin" asp-controller="Users" asp-action="Index">Користувачі</a>

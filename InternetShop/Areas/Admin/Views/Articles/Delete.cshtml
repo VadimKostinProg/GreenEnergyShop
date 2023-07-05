@@ -1,0 +1,27 @@
+﻿@model ArticleResponse
+
+@{
+    ViewBag.Title = "Видалення статті";
+}
+
+<form asp-action="Delete" method="post">
+    <input asp-for="Id" hidden />
+    <input asp-for="Title" hidden />
+    <input asp-for="Description" hidden />
+    <div class="container border p-3 mt-4 w-75">
+        <h1 class="mb-3">Видалення статті</h1>
+        
+        <h2>@Model.Title</h2>
+
+        @Html.Raw(Model.Description)
+        
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-danger form-control">Видалити</button>
+            </div>
+            <div class="col-6">
+                <a asp-action="Index" class="btn btn-secondary form-control">Назад</a>
+            </div>
+        </div>
+    </div>
+</form>

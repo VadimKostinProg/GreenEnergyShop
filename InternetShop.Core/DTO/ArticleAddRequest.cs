@@ -16,9 +16,11 @@ namespace InternetShop.Core.DTO
 
         public string Description { get; set; } = string.Empty;
 
+        public bool IsHeaderArticle { get; set; } = false;
+
         public Article ToArticle()
         {
-            return new Article { Title = this.Title, Description = this.Description };
+            return new Article { Title = this.Title, Description = this.Description, IsHeaderArticle = this.IsHeaderArticle };
         }
     }
 }
