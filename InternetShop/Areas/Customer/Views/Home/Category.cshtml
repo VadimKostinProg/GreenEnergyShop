@@ -18,15 +18,15 @@
                 <div class="card-text">
                     @if (!product.IsDiscountActive)
                     {
-                        <p class="card-text">@product.Price <span class="currency">₴</span></p>
+                        <p class="card-text lead">@product.Price <span class="currency">₴</span></p>
                     }
                     else
                     {
-                        <p class="text-decoration-line-through">@product.Price <span class="currency">₴</span></p>
-                        <p class="card-text text-danger">@product.DiscountPrice <span class="currency">₴</span></p>
+                        <p class="text-decoration-line-through lead">@product.Price <span class="currency">₴</span></p>
+                        <p class="card-text text-danger lead">@product.DiscountPrice <span class="currency">₴</span></p>
                     }
                 </div>
-                <a asp-controller="Home" asp-action="Details" asp-route-productId="@product.Id" class="btn btn-primary w-100">Детальніше</a>
+                <a asp-controller="Home" asp-action="Details" asp-route-productId="@product.Id" class="btn btn-primary w-100 mt-3">Детальніше</a>
             </div>
         </div>
     }

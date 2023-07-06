@@ -59,6 +59,7 @@ namespace InternetShop.UI.Areas.Customer.Controllers
 
             List<ProductResponse> searchedProducts = products
                 .Where(product => product.Name.ToLower().Contains(query) || product.Category.Name.ToLower().Contains(query))
+                .OrderBy(product => product.IsDiscountActive ? product.DiscountPrice : product.Price)
                 .ToList();
 
             ViewBag.Searched = searchedProducts.Count > 0;
@@ -95,11 +96,14 @@ namespace InternetShop.UI.Areas.Customer.Controllers
 
             ViewBag.CategoryName = categoryResponse.Name;
 
-            IEnumerable<ProductResponse> products = await _productService.GetAllProducts(convertPrice: true);
+            var products = await _productService.GetAllProducts(convertPrice: true);
 
-            IEnumerable<ProductResponse> productWithCategory = products.Where(product => product.CategoryId == categoryId);
+            var productsOfCategory = products
+                .Where(product => product.CategoryId == categoryId)
+                .OrderBy(product => product.IsDiscountActive ? product.DiscountPrice : product.Price)
+                .ToList();
 
-            return View(productWithCategory);
+            return View(productsOfCategory);
         }
 
         [HttpGet]
@@ -185,10 +189,14 @@ namespace InternetShop.UI.Areas.Customer.Controllers
 
             IEnumerable<ProductResponse> products = await _productService.GetAllProducts(convertPrice: true);
 
-            List<ProductResponse> popularProducts = products.Where(product => product.IsPopular)
+            List<ProductResponse> popularProducts = products
+                .Where(product => product.IsPopular)
+                .OrderBy(product => product.IsDiscountActive ? product.DiscountPrice : product.Price)
                 .ToList();
 
-            List<ProductResponse> actionProducts = products.Where(product => product.IsDiscountActive)
+            List<ProductResponse> actionProducts = products
+                .Where(product => product.IsDiscountActive)
+                .OrderBy(product => product.IsDiscountActive ? product.DiscountPrice : product.Price)
                 .ToList();
 
             if (popularProducts.Count == 0)
