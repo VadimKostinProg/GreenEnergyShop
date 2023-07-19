@@ -44,6 +44,11 @@ namespace InternetShop.Infrastructure.Repositories
             return _db.Articles.AsEnumerable();
         }
 
+        public Article? GetArticleByTitle(string title)
+        {
+            return _db.Articles.FirstOrDefault(article => article.Title == title);
+        }
+
         public Article? GetValueById(Guid id)
         {
             return _db.Articles.FirstOrDefault(x => x.Id == id);

@@ -12,5 +12,6 @@ namespace InternetShop.Core.Domain.RepositoryContracts
     /// </summary>
     public interface IArticleRepository : IRepository<Article>
     {
+        Article? GetArticleByTitle(string title);
     }
 }

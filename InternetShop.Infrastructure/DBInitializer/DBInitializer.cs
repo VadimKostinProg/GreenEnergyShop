@@ -70,7 +70,8 @@ namespace InternetShop.Infrastructure.DBInitializer
                 var articleAddRequest = new ArticleAddRequest()
                 {
                     Title = "Про нас",
-                    Description = string.Empty
+                    Description = string.Empty,
+                    IsHeaderArticle = true
                 };
 
                 _articleService.AddArticle(articleAddRequest).GetAwaiter().GetResult();
@@ -81,7 +82,8 @@ namespace InternetShop.Infrastructure.DBInitializer
                 var articleAddRequest = new ArticleAddRequest()
                 {
                     Title = "Доставка та оплата",
-                    Description = string.Empty
+                    Description = string.Empty,
+                    IsHeaderArticle = true
                 };
 
                 _articleService.AddArticle(articleAddRequest).GetAwaiter().GetResult();
@@ -92,7 +94,8 @@ namespace InternetShop.Infrastructure.DBInitializer
                 var articleAddRequest = new ArticleAddRequest()
                 {
                     Title = "Контакти",
-                    Description = string.Empty
+                    Description = string.Empty,
+                    IsHeaderArticle = true
                 };
 
                 _articleService.AddArticle(articleAddRequest).GetAwaiter().GetResult();

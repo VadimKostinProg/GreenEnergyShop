@@ -24,7 +24,7 @@ namespace InternetShop.Core.Services
             if(articleAddRequest == null) 
                 throw new ArgumentNullException(nameof(articleAddRequest));
 
-            if(_articleRepository.GetAll().Any(article => article.Title == articleAddRequest.Title))
+            if(_articleRepository.GetArticleByTitle(articleAddRequest.Title) != null)
                 throw new ArgumentException("Стаття з такою назвою вже існує");
 
             if (articleAddRequest.Description == null)
@@ -52,11 +52,11 @@ namespace InternetShop.Core.Services
 
         public async Task<IEnumerable<ArticleResponse>> GetAllArticles(bool includeHeaders = true)
         {
-            var articles = _articleRepository.GetAll().Select(article => article.ToArticleResponse());
+            var articles = _articleRepository.GetAll().Select(article => article.ToArticleResponse()).ToList();
 
             if (!includeHeaders)
             {
-                articles = articles.Where(article => article.IsHeaderArticle == false);
+                articles = articles.Where(article => article.IsHeaderArticle == false).ToList();
             }
 
             return articles;
@@ -74,7 +74,7 @@ namespace InternetShop.Core.Services
 
         public async Task<ArticleResponse?> GetArticleByTitle(string title)
         {
-            Article? article = _articleRepository.GetAll().FirstOrDefault(x => x.Title == title);
+            Article? article = _articleRepository.GetArticleByTitle(title);
 
             if(article == null)
                 return null;
